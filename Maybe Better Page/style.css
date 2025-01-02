@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* Header */
+.headerbar {
+    display: flex;
+    background-color: #1A1A1A;
+    color: white;
+    width: 100%;
+    justify-content: center;
+}
+.logo {
+    width: 40%;
+    padding: 20px;
+}
+.navbar {
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* Opening Banner */
+.opening_banner {
+    display: flex;
+    width: 100%;
+    height: 670px;
+    background-color: #0D0D0D;
+}
+.banner_text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading_opening_text {
+    padding: 50px;
+    color: #FFFFFF;
+}
+.small_opening_text {
+    padding: 50px;
+    color: #B3B3B3;
+}
+.banner_image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_pic img{
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid red;
+}
+
+/* About Me */
+.about_me {
+    display: flex;
+    width: 100%;
+    height: 670px;
+    background-color: #1A1A1A;
+}
+
+
+/* Education */
+.education {
+    display: flex;
+    width: 100%;
+    height: 670px;
+    background-color: #0D0D0D;
+}
+
+/* Interests */
+.interests {
+    display: flex;
+    width: 100%;
+    height: 670px;
+    background-color: #1A1A1A;
+}
+
+/* Footer */
