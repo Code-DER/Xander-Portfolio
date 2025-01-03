@@ -1,16 +1,32 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    background-color: #121A2F;
+}
+section {
+    height: auto;
+    scroll-margin-top: 100px;
+}
+.headings {
+    text-align: center;
+}
+.highlight {
+    color: #FFD700;
 }
 
 /* Header */
 .headerbar {
+    position: sticky;
+    top: 0;
+    background-color: #121A2F;
+    border-bottom: 1px solid #fbff00;
+    z-index: 1000;
     display: flex;
-    background-color: #1A1A1A;
     color: white;
     width: 100%;
     justify-content: center;
@@ -18,11 +34,23 @@ body {
 .logo {
     width: 40%;
     padding: 20px;
+    margin-left: 30px;
+    color: #FFD700;
+    font-weight: 1000;
 }
 .navbar {
     width: 60%;
     padding: 20px;
     text-align: center;
+    
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+.navbar a:hover {
+    color: #FFD700;
 }
 
 
@@ -32,57 +60,246 @@ body {
     display: flex;
     width: 100%;
     height: 670px;
-    background-color: #0D0D0D;
 }
 .banner_text {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50%;
+    padding: 20px;
+    align-content: center;
+    margin-left: 150px;
+    margin-right: 140px;
 }
-.heading_opening_text {
-    padding: 50px;
-    color: #FFFFFF;
+.heading_opening_text h1 {
+    font-size: 3em;
+    margin: 0;
 }
-.small_opening_text {
-    padding: 50px;
-    color: #B3B3B3;
+.small_opening_text p {
+    font-size: 1.2em;
+    margin-top: 20px;
 }
 .banner_image {
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.profile_pic {
+    position: relative;
+    display: inline-block;
 }
 .profile_pic img{
     width: 300px;
+    height: auto;
     border-radius: 50%;
-    border: 5px solid red;
+    border: 5px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to right, #ee00ff, #fbff00);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 /* About Me */
 .about_me {
     display: flex;
     width: 100%;
-    height: 670px;
-    background-color: #1A1A1A;
+}
+.about_img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+.about_img img {
+    width: 450px;
+    margin-left: 150px;
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to bottom right, #FFD700, #000000);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.about_info {
+    width: 60%;
+}
+.about_info .headings{
+    font-size: 1.8em;
+    text-align: left;
+}
+.about_info .headings h1:nth-child(1) {
+    border-bottom: 2px solid gray;
+    margin-right: 550px;
+}
+.about_text {
+    text-align: justify;
+    margin-top: 50px;
+    margin-right: 150px;
+}
+.socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.socials a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.socials a:hover {
+    color: #FFD700;
+}
+ion-icon {
+    font-size: 2em;
+    margin: 10px;
 }
 
 
 /* Education */
 .education {
-    display: flex;
     width: 100%;
-    height: 670px;
-    background-color: #0D0D0D;
 }
+.education .headings {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 50px 0;
+}
+.schools_div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+.school_card {
+    display: flex;
+    margin: 20px 180px;
+}
+.school_pic {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.school_pic img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10%;
+}
+.school_text {
+    width: 60%;
+    color: white;
+    padding: 20px;
+    line-height: 1.5;
+    border-left: 2px solid #FFD700;
+}
+.school_text h3 {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+
 
 /* Interests */
 .interests {
-    display: flex;
     width: 100%;
-    height: 670px;
-    background-color: #1A1A1A;
+}
+.interest_intro {
+    display: flex;
+    margin: 30px 200px;
+    gap: 30px;
+    flex-direction: column;
+}
+.interest_intro .headings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    margin-right: 800px;
+    font-size: 1.8em;
+    width: auto;
+}
+.interest_headings {
+    display: flex;
+    align-items: center;
+    margin: 20px 1150px 20px 190px;
+    background-color: #FFD700;
+    border-radius: 15px;
+    color: black;
+}
+.gamespics, .moviespics, .photopics{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+}
+.gamespics > div, .moviespics > div, .photopics > div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+.gamespics > div:hover, .moviespics > div:hover, .photopics > div:hover {
+    flex: 5;
+}
+
+/* Projects */
+.projects .headings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    margin: 0 600px;
+}
+.project_card_main {
+    display: flex;
+    gap: 100px;
+    padding: 40px;
+    justify-content: center;
+}
+.project_card {
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+.project_card ion-icon, .project_card h3 {
+    font-size: 3em;
+}
+.project_card a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: #FFD700;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px black;
+}
+.seemore {
+    margin: 20px;
+    width: auto;
+}
+.project_card:hover {
+    transform: translateY(-10px);
+    transition: 0.5s ease-in-out;
+    border: 1px solid #FFD700;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 /* Footer */
+footer {
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
